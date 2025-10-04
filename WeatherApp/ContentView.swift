@@ -14,6 +14,14 @@ struct ContentView: View {
                            startPoint: .topLeading,
                            endPoint: .bottomTrailing)
             .ignoresSafeArea()
+            VStack {
+                Text("Bangalore")
+                    .font(.system(size: 32, weight: .bold))
+                    .foregroundColor(.white)
+                Text("25°C")
+                    .font(.system(size: 48, weight: .bold))
+                    .foregroundColor(.white)
+            }
         }
     }
 }
