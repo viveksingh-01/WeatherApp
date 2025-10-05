@@ -18,6 +18,8 @@ struct ContentView: View {
                 Text("Bangalore")
                     .font(.system(size: 32, weight: .bold))
                     .foregroundColor(.white)
+                Image(systemName: "cloud.sun.fill")
+                    .renderingMode(.original)
                 Text("25°C")
                     .font(.system(size: 48, weight: .bold))
                     .foregroundColor(.white)
