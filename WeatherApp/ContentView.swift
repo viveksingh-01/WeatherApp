@@ -21,6 +21,7 @@ struct ContentView: View {
                 Image(systemName: "cloud.sun.fill")
                     .renderingMode(.original)
                     .resizable()
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: 128, height: 128)
                 Text("25°C")
                     .font(.system(size: 48, weight: .bold))
