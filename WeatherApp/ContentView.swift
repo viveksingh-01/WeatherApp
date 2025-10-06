@@ -15,6 +15,7 @@ struct ContentView: View {
                            endPoint: .bottomTrailing)
             .ignoresSafeArea()
             VStack {
+                Spacer()
                 VStack(spacing: 0) {
                     Text("Bangalore")
                         .font(.system(size: 32, weight: .bold))
@@ -28,6 +29,7 @@ struct ContentView: View {
                         .font(.system(size: 48, weight: .bold))
                         .foregroundColor(.white)
                 }
+                Spacer()
                 HStack {
                     VStack {
                         Text("Mon")
@@ -36,9 +38,9 @@ struct ContentView: View {
                         Image(systemName: "cloud.sun.fill")
                             .renderingMode(.original)
                             .font(.system(size: 32))
-                        
                     }
                 }
+                Spacer()
                 
             }
         }
