@@ -28,6 +28,17 @@ struct ContentView: View {
                         .font(.system(size: 48, weight: .bold))
                         .foregroundColor(.white)
                 }
+                HStack {
+                    VStack {
+                        Text("Mon")
+                            .font(.system(size: 20))
+                            .foregroundColor(.blue)
+                        Image(systemName: "cloud.sun.fill")
+                            .renderingMode(.original)
+                            .font(.system(size: 32))
+                        
+                    }
+                }
                 
             }
         }
