@@ -19,7 +19,7 @@ struct ContentView: View {
                 VStack(spacing: 0) {
                     Text("Bangalore")
                         .font(.system(size: 32, weight: .bold))
-                        .foregroundColor(.white)
+                        .foregroundStyle(.white)
                     Image(systemName: "cloud.sun.fill")
                         .renderingMode(.original)
                         .resizable()
@@ -27,19 +27,19 @@ struct ContentView: View {
                         .frame(width: 128, height: 128)
                     Text("25°C")
                         .font(.system(size: 48, weight: .bold))
-                        .foregroundColor(.white)
+                        .foregroundStyle(.white)
                 }
                 Spacer()
                 HStack {
                     VStack {
                         Text("Mon")
                             .font(.system(size: 20))
-                            .foregroundColor(.blue)
+                            .foregroundStyle(.blue)
                         Image(systemName: "cloud.sun.fill")
                             .renderingMode(.original)
                             .font(.system(size: 32))
                         Text("32°C")
-                            .foregroundColor(.white)
+                            .foregroundStyle(.white)
                     }
                 }
                 Spacer()
