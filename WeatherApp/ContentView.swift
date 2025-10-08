@@ -52,12 +52,15 @@ struct WeeklyWeatherView: View {
     var body: some View {
         VStack {
             Text(dayOfWeek)
-                .font(.system(size: 20))
+                .font(.system(size: 22))
                 .foregroundStyle(.white)
             Image(systemName: weatherIcon)
                 .renderingMode(.original)
-                .font(.system(size: 32))
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 40, height: 40)
             Text("\(temperature)°C")
+                .font(.system(size: 22, weight: .medium))
                 .foregroundStyle(.white)
         }
     }
