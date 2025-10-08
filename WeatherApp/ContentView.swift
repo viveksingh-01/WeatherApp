@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            LinearGradient(colors: [Color.blue, Color.white],
+            LinearGradient(colors: [Color.blue, Color.purple],
                            startPoint: .topLeading,
                            endPoint: .bottomTrailing)
             .ignoresSafeArea()
@@ -53,7 +53,7 @@ struct WeeklyWeatherView: View {
         VStack {
             Text(dayOfWeek)
                 .font(.system(size: 20))
-                .foregroundStyle(.blue)
+                .foregroundStyle(.white)
             Image(systemName: weatherIcon)
                 .renderingMode(.original)
                 .font(.system(size: 32))
