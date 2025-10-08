@@ -38,6 +38,8 @@ struct ContentView: View {
                         Image(systemName: "cloud.sun.fill")
                             .renderingMode(.original)
                             .font(.system(size: 32))
+                        Text("32°C")
+                            .foregroundColor(.white)
                     }
                 }
                 Spacer()
