@@ -31,16 +31,7 @@ struct ContentView: View {
                 }
                 Spacer()
                 HStack {
-                    VStack {
-                        Text("Mon")
-                            .font(.system(size: 20))
-                            .foregroundStyle(.blue)
-                        Image(systemName: "cloud.sun.fill")
-                            .renderingMode(.original)
-                            .font(.system(size: 32))
-                        Text("32°C")
-                            .foregroundStyle(.white)
-                    }
+                    WeeklyWeatherView(dayOfWeek: "Mon", weatherIcon: "sun.max.fill", temperature: 32)
                 }
                 Spacer()
                 
@@ -51,4 +42,23 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+}
+
+struct WeeklyWeatherView: View {
+    var dayOfWeek: String
+    var weatherIcon: String
+    var temperature: Int
+    
+    var body: some View {
+        VStack {
+            Text(dayOfWeek)
+                .font(.system(size: 20))
+                .foregroundStyle(.blue)
+            Image(systemName: weatherIcon)
+                .renderingMode(.original)
+                .font(.system(size: 32))
+            Text("\(temperature)°C")
+                .foregroundStyle(.white)
+        }
+    }
 }
