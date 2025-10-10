@@ -31,7 +31,13 @@ struct ContentView: View {
                 }
                 Spacer()
                 HStack {
-                    WeeklyWeatherView(dayOfWeek: "Mon", weatherIcon: "sun.max.fill", temperature: 32)
+                    WeeklyWeatherView(dayOfWeek: "Sun", weatherIcon: "cloud.fill", temperature: 25)
+                    WeeklyWeatherView(dayOfWeek: "Mon", weatherIcon: "cloud.rain.fill", temperature: 26)
+                    WeeklyWeatherView(dayOfWeek: "Tue", weatherIcon: "sun.max.fill", temperature: 30)
+                    WeeklyWeatherView(dayOfWeek: "Wed", weatherIcon: "sun.max.fill", temperature: 32)
+                    WeeklyWeatherView(dayOfWeek: "Thu", weatherIcon: "cloud.sun.fill", temperature: 28)
+                    WeeklyWeatherView(dayOfWeek: "Fri", weatherIcon: "cloud.fill", temperature: 26)
+                    WeeklyWeatherView(dayOfWeek: "Sat", weatherIcon: "cloud.rain.fill", temperature: 23)
                 }
                 Spacer()
                 
