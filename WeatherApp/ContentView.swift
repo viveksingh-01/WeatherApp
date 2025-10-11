@@ -30,7 +30,7 @@ struct ContentView: View {
                         .foregroundStyle(.white)
                 }
                 Spacer()
-                HStack {
+                HStack(spacing: 36) {
                     WeeklyWeatherView(dayOfWeek: "Sun", weatherIcon: "cloud.fill", temperature: 25)
                     WeeklyWeatherView(dayOfWeek: "Mon", weatherIcon: "cloud.rain.fill", temperature: 26)
                     WeeklyWeatherView(dayOfWeek: "Tue", weatherIcon: "sun.max.fill", temperature: 30)
@@ -39,6 +39,7 @@ struct ContentView: View {
                     WeeklyWeatherView(dayOfWeek: "Fri", weatherIcon: "cloud.fill", temperature: 26)
                     WeeklyWeatherView(dayOfWeek: "Sat", weatherIcon: "cloud.rain.fill", temperature: 23)
                 }
+                .padding(36)
                 Spacer()
                 
             }
@@ -65,7 +66,7 @@ struct WeeklyWeatherView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
-            Text("\(temperature)°C")
+            Text("\(temperature)°")
                 .font(.system(size: 22, weight: .medium))
                 .foregroundStyle(.white)
         }
