@@ -73,8 +73,11 @@ struct WeeklyWeatherView: View {
 }
 
 struct BackgroundView: View {
+    var topColor: Color = .blue
+    var bottomColor: Color = .purple
+    
     var body: some View {
-        LinearGradient(colors: [Color.blue, Color.purple],
+        LinearGradient(colors: [topColor, bottomColor],
                        startPoint: .topLeading,
                        endPoint: .bottomTrailing)
         .ignoresSafeArea()
