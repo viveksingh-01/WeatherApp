@@ -14,7 +14,7 @@ struct ContentView: View {
             VStack {
                 Spacer()
                 CityTextView()
-                TodayWeatherView()
+                TodayWeatherView(imageName: "cloud.sun.fill", temperature: 28)
                 Spacer()
                 ScrollView(.horizontal) {
                     HStack(spacing: 36) {
@@ -70,14 +70,17 @@ struct CityTextView: View {
 }
 
 struct TodayWeatherView: View {
+    var imageName: String
+    var temperature: Int
+    
     var body: some View {
         VStack(spacing: 0) {
-            Image(systemName: "cloud.sun.fill")
+            Image(systemName: imageName)
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 128, height: 128)
-            Text("25°C")
+            Text("\(temperature)°C")
                 .font(.system(size: 48, weight: .bold))
                 .foregroundStyle(.white)
         }
