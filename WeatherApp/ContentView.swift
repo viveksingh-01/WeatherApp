@@ -13,7 +13,7 @@ struct ContentView: View {
             BackgroundView()
             VStack {
                 Spacer()
-                CityTextView()
+                CityTextView(city: "Bangalore, IN")
                 TodayWeatherView(imageName: "cloud.sun.fill", temperature: 28)
                 Spacer()
                 ScrollView(.horizontal) {
@@ -62,8 +62,9 @@ struct WeeklyWeatherView: View {
 }
 
 struct CityTextView: View {
+    var city: String
     var body: some View {
-        Text("Bangalore, IN")
+        Text(city)
             .font(.system(size: 32, weight: .bold))
             .foregroundStyle(.white)
     }
