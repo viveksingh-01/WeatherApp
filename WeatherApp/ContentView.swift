@@ -13,6 +13,7 @@ struct ContentView: View {
             BackgroundView()
             VStack {
                 Spacer()
+                CityTextView()
                 TodayWeatherView()
                 Spacer()
                 ScrollView(.horizontal) {
@@ -60,12 +61,17 @@ struct WeeklyWeatherView: View {
     }
 }
 
+struct CityTextView: View {
+    var body: some View {
+        Text("Bangalore, IN")
+            .font(.system(size: 32, weight: .bold))
+            .foregroundStyle(.white)
+    }
+}
+
 struct TodayWeatherView: View {
     var body: some View {
         VStack(spacing: 0) {
-            Text("Bangalore")
-                .font(.system(size: 32, weight: .bold))
-                .foregroundStyle(.white)
             Image(systemName: "cloud.sun.fill")
                 .renderingMode(.original)
                 .resizable()
