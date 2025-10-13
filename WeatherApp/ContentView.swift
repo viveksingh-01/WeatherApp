@@ -13,19 +13,7 @@ struct ContentView: View {
             BackgroundView()
             VStack {
                 Spacer()
-                VStack(spacing: 0) {
-                    Text("Bangalore")
-                        .font(.system(size: 32, weight: .bold))
-                        .foregroundStyle(.white)
-                    Image(systemName: "cloud.sun.fill")
-                        .renderingMode(.original)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 128, height: 128)
-                    Text("25°C")
-                        .font(.system(size: 48, weight: .bold))
-                        .foregroundStyle(.white)
-                }
+                TodayWeatherView()
                 Spacer()
                 ScrollView(.horizontal) {
                     HStack(spacing: 36) {
@@ -67,6 +55,24 @@ struct WeeklyWeatherView: View {
                 .frame(width: 40, height: 40)
             Text("\(temperature)°")
                 .font(.system(size: 22, weight: .medium))
+                .foregroundStyle(.white)
+        }
+    }
+}
+
+struct TodayWeatherView: View {
+    var body: some View {
+        VStack(spacing: 0) {
+            Text("Bangalore")
+                .font(.system(size: 32, weight: .bold))
+                .foregroundStyle(.white)
+            Image(systemName: "cloud.sun.fill")
+                .renderingMode(.original)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 128, height: 128)
+            Text("25°C")
+                .font(.system(size: 48, weight: .bold))
                 .foregroundStyle(.white)
         }
     }
