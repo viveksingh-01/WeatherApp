@@ -16,20 +16,8 @@ struct ContentView: View {
                 CityTextView(city: "Bangalore, IN")
                 TodayWeatherView(imageName: "cloud.sun.fill", temperature: 28)
                 Spacer()
-                ScrollView(.horizontal) {
-                    HStack(spacing: 36) {
-                        WeeklyWeatherView(dayOfWeek: "Sun", weatherIcon: "cloud.fill", temperature: 25)
-                        WeeklyWeatherView(dayOfWeek: "Mon", weatherIcon: "cloud.rain.fill", temperature: 26)
-                        WeeklyWeatherView(dayOfWeek: "Tue", weatherIcon: "sun.max.fill", temperature: 30)
-                        WeeklyWeatherView(dayOfWeek: "Wed", weatherIcon: "sun.max.fill", temperature: 32)
-                        WeeklyWeatherView(dayOfWeek: "Thu", weatherIcon: "cloud.sun.fill", temperature: 28)
-                        WeeklyWeatherView(dayOfWeek: "Fri", weatherIcon: "cloud.fill", temperature: 26)
-                        WeeklyWeatherView(dayOfWeek: "Sat", weatherIcon: "cloud.rain.fill", temperature: 23)
-                    }
-                    .padding(36)
-                }
+                WeeklyForecastView()
                 Spacer()
-                
             }
         }
     }
@@ -84,6 +72,23 @@ struct TodayWeatherView: View {
             Text("\(temperature)°C")
                 .font(.system(size: 48, weight: .bold))
                 .foregroundStyle(.white)
+        }
+    }
+}
+
+struct WeeklyForecastView: View {
+    var body: some View {
+        ScrollView(.horizontal) {
+            HStack(spacing: 36) {
+                WeeklyWeatherView(dayOfWeek: "Sun", weatherIcon: "cloud.fill", temperature: 25)
+                WeeklyWeatherView(dayOfWeek: "Mon", weatherIcon: "cloud.rain.fill", temperature: 26)
+                WeeklyWeatherView(dayOfWeek: "Tue", weatherIcon: "sun.max.fill", temperature: 30)
+                WeeklyWeatherView(dayOfWeek: "Wed", weatherIcon: "sun.max.fill", temperature: 32)
+                WeeklyWeatherView(dayOfWeek: "Thu", weatherIcon: "cloud.sun.fill", temperature: 28)
+                WeeklyWeatherView(dayOfWeek: "Fri", weatherIcon: "cloud.fill", temperature: 26)
+                WeeklyWeatherView(dayOfWeek: "Sat", weatherIcon: "cloud.rain.fill", temperature: 23)
+            }
+            .padding(36)
         }
     }
 }
