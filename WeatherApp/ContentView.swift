@@ -27,14 +27,14 @@ struct ContentView: View {
     ContentView()
 }
 
-struct WeeklyWeatherView: View {
-    var dayOfWeek: String
+struct DayOfWeekView: View {
+    var day: String
     var weatherIcon: String
     var temperature: Int
     
     var body: some View {
         VStack {
-            Text(dayOfWeek)
+            Text(day)
                 .font(.system(size: 22))
                 .foregroundStyle(.white)
             Image(systemName: weatherIcon)
@@ -80,13 +80,13 @@ struct WeeklyForecastView: View {
     var body: some View {
         ScrollView(.horizontal) {
             HStack(spacing: 36) {
-                WeeklyWeatherView(dayOfWeek: "Sun", weatherIcon: "cloud.fill", temperature: 25)
-                WeeklyWeatherView(dayOfWeek: "Mon", weatherIcon: "cloud.rain.fill", temperature: 26)
-                WeeklyWeatherView(dayOfWeek: "Tue", weatherIcon: "sun.max.fill", temperature: 30)
-                WeeklyWeatherView(dayOfWeek: "Wed", weatherIcon: "sun.max.fill", temperature: 32)
-                WeeklyWeatherView(dayOfWeek: "Thu", weatherIcon: "cloud.sun.fill", temperature: 28)
-                WeeklyWeatherView(dayOfWeek: "Fri", weatherIcon: "cloud.fill", temperature: 26)
-                WeeklyWeatherView(dayOfWeek: "Sat", weatherIcon: "cloud.rain.fill", temperature: 23)
+                DayOfWeekView(day: "Sun", weatherIcon: "cloud.fill", temperature: 25)
+                DayOfWeekView(day: "Mon", weatherIcon: "cloud.rain.fill", temperature: 26)
+                DayOfWeekView(day: "Tue", weatherIcon: "sun.max.fill", temperature: 30)
+                DayOfWeekView(day: "Wed", weatherIcon: "sun.max.fill", temperature: 32)
+                DayOfWeekView(day: "Thu", weatherIcon: "cloud.sun.fill", temperature: 28)
+                DayOfWeekView(day: "Fri", weatherIcon: "cloud.fill", temperature: 26)
+                DayOfWeekView(day: "Sat", weatherIcon: "cloud.rain.fill", temperature: 23)
             }
             .padding(36)
         }
