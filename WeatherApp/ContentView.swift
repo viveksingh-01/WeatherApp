@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isNightMode: Bool = false
+    
     var body: some View {
         ZStack {
-            BackgroundView()
+            BackgroundView(isNightMode: $isNightMode)
             VStack {
                 Spacer()
                 CityTextView(city: "Bangalore, IN")
@@ -94,8 +96,10 @@ struct WeeklyForecastView: View {
 }
 
 struct BackgroundView: View {
-    var topColor: Color = .blue
-    var bottomColor: Color = .purple
+    @Binding var isNightMode: Bool
+    
+    var topColor: Color { isNightMode ? .black : .blue }
+    var bottomColor: Color { isNightMode ? .gray : .purple }
     
     var body: some View {
         LinearGradient(colors: [topColor, bottomColor],
