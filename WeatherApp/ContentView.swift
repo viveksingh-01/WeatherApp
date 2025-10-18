@@ -15,6 +15,12 @@ struct ContentView: View {
             BackgroundView(isNightMode: $isNightMode)
             VStack {
                 Spacer()
+                Toggle(isOn: $isNightMode) {
+                    Text("Night Mode")
+                        .font(.system(size: 20, weight: .medium))
+                        .foregroundStyle(.white)
+                }
+                Spacer()
                 CityTextView(city: "Bangalore, IN")
                 TodayWeatherView(isNightMode: $isNightMode, temperature: 20)
                 Spacer()
