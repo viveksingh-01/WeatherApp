@@ -73,6 +73,7 @@ struct TodayWeatherView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 128, height: 128)
+                .padding(16)
             Text("\(temperature)°C")
                 .font(.system(size: 48, weight: .bold))
                 .foregroundStyle(.white)
