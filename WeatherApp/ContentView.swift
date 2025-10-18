@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isNightMode: Bool = false
+    @State var isNightMode: Bool = true
     
     var body: some View {
         ZStack {
@@ -16,7 +16,7 @@ struct ContentView: View {
             VStack {
                 Spacer()
                 CityTextView(city: "Bangalore, IN")
-                TodayWeatherView(imageName: "cloud.sun.fill", temperature: 28)
+                TodayWeatherView(isNightMode: $isNightMode, temperature: 20)
                 Spacer()
                 WeeklyForecastView()
                 Spacer()
@@ -61,7 +61,9 @@ struct CityTextView: View {
 }
 
 struct TodayWeatherView: View {
-    var imageName: String
+    @Binding var isNightMode: Bool
+    
+    var imageName: String { isNightMode ? "moon.stars.fill" : "cloud.sun.fill" }
     var temperature: Int
     
     var body: some View {
