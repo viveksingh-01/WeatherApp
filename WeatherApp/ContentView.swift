@@ -20,6 +20,7 @@ struct ContentView: View {
                         .font(.system(size: 20, weight: .medium))
                         .foregroundStyle(.white)
                 }
+                .padding(.horizontal, 32)
                 Spacer()
                 CityTextView(city: "Bangalore, IN")
                 TodayWeatherView(isNightMode: $isNightMode, temperature: 20)
